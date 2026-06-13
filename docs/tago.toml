@@ -1,0 +1,10 @@
+title       = "kernel"
+baseURL     = "https://kernelorg-cli.tamnd.com/"
+description = "Browse Linux kernel releases from kernel.org"
+contentDir  = "content"
+outputDir   = "public"
+theme       = "tago-doks"
+syntaxHighlight = "true"
+
+[params]
+github = "https://github.com/tamnd/kernelorg-cli"
