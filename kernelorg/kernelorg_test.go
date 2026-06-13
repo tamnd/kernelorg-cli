@@ -16,7 +16,7 @@ const fixtureJSON = `{
     {
       "moniker": "stable",
       "version": "6.9.7",
-      "released": {"isodate": "2024-06-21", "timestamp": "1718928000"},
+      "released": {"isodate": "2024-06-21", "timestamp": 1718928000},
       "source": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.7.tar.xz",
       "pgp": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.9.7.tar.sign",
       "changelog": "https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.9.7",
@@ -26,7 +26,7 @@ const fixtureJSON = `{
     {
       "moniker": "mainline",
       "version": "6.10-rc5",
-      "released": {"isodate": "2024-06-23", "timestamp": "1719100800"},
+      "released": {"isodate": "2024-06-23", "timestamp": 1719100800},
       "source": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.10-rc5.tar.xz",
       "pgp": "",
       "changelog": "",
@@ -36,7 +36,7 @@ const fixtureJSON = `{
     {
       "moniker": "longterm",
       "version": "6.1.97",
-      "released": {"isodate": "2024-06-21", "timestamp": "1718928000"},
+      "released": {"isodate": "2024-06-21", "timestamp": 1718928000},
       "source": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.97.tar.xz",
       "pgp": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.97.tar.sign",
       "changelog": "https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.1.97",
@@ -46,7 +46,7 @@ const fixtureJSON = `{
     {
       "moniker": "longterm",
       "version": "5.15.162",
-      "released": {"isodate": "2024-06-21", "timestamp": "1718928000"},
+      "released": {"isodate": "2024-06-21", "timestamp": 1718928000},
       "source": "https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.15.162.tar.xz",
       "pgp": "https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.15.162.tar.sign",
       "changelog": "https://cdn.kernel.org/pub/linux/kernel/v5.x/ChangeLog-5.15.162",

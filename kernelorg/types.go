@@ -47,7 +47,7 @@ type wireRelease struct {
 
 type wireReleased struct {
 	Isodate   string `json:"isodate"`
-	Timestamp string `json:"timestamp"`
+	Timestamp int64 `json:"timestamp"`
 }
 
 func toRelease(w wireRelease) Release {
