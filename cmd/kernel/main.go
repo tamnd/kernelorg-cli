@@ -1,8 +1,10 @@
-// Command kernel is a single-binary command line for kernelorg.
+// Command kernel is a CLI for browsing Linux kernel releases from kernel.org.
 package main
 
 import (
 	"context"
+	"errors"
+	"fmt"
 	"os"
 	"os/signal"
 	"syscall"
@@ -16,12 +18,21 @@ func main() {
 	defer stop()
 
 	root := cli.Root()
-	// fang gives styled help, errors, and shell completion for free; the command
-	// tree and its exit-code mapping stay in the cli package.
-	if err := fang.Execute(ctx, root,
+	err := fang.Execute(ctx, root,
 		fang.WithVersion(cli.Version),
 		fang.WithNotifySignal(os.Interrupt, syscall.SIGTERM),
-	); err != nil {
-		os.Exit(1)
+	)
+	if err == nil {
+		return
 	}
+
+	var ee *cli.ExitError
+	if errors.As(err, &ee) {
+		if ee.Err != nil {
+			_, _ = fmt.Fprintln(os.Stderr, "kernel:", ee.Err)
+		}
+		os.Exit(ee.Code)
+	}
+	_, _ = fmt.Fprintln(os.Stderr, "kernel:", err)
+	os.Exit(1)
 }
